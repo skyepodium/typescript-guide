@@ -1,1 +1,1 @@
-# type script
+# TypeScript 가이드

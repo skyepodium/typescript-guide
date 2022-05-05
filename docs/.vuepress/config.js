@@ -1,7 +1,7 @@
 // config.js
 module.exports = {
-    title: 'vuepress-stater', // 사이트 타이틀
-    description: 'vuepress로 만든 문서입니다.',
+    title: 'Study in TypeScript',
+    description: '타입스크립트 가이드',
     base: '/typescript-guide/',
     themeConfig: {
       sidebar: [
@@ -11,7 +11,14 @@ module.exports = {
           children: [
             '/intro/intro'
           ],
-        }
+        },
+        {
+          title: 'install',
+          collapsable: false,
+          children: [
+            '/install/install'
+          ],
+        }        
       ]
     } 
   }
