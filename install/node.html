@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>node.js 설치 | Study in TypeScript</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="타입스크립트 가이드">
+    
+    <link rel="preload" href="/typescript-guide/assets/css/0.styles.cd042308.css" as="style"><link rel="preload" href="/typescript-guide/assets/js/app.6d1d395d.js" as="script"><link rel="preload" href="/typescript-guide/assets/js/2.5766b804.js" as="script"><link rel="preload" href="/typescript-guide/assets/js/3.26fbce2b.js" as="script"><link rel="prefetch" href="/typescript-guide/assets/js/10.c01655cd.js"><link rel="prefetch" href="/typescript-guide/assets/js/4.87eb7f60.js"><link rel="prefetch" href="/typescript-guide/assets/js/5.aab965f2.js"><link rel="prefetch" href="/typescript-guide/assets/js/6.d65506ca.js"><link rel="prefetch" href="/typescript-guide/assets/js/7.56918a23.js"><link rel="prefetch" href="/typescript-guide/assets/js/8.86212562.js"><link rel="prefetch" href="/typescript-guide/assets/js/9.842739d4.js">
+    <link rel="stylesheet" href="/typescript-guide/assets/css/0.styles.cd042308.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/typescript-guide/" class="home-link router-link-active"><!----> <span class="site-name">Study in TypeScript</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>intro</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/typescript-guide/intro/intro.html" class="sidebar-link">TypeScript 가이드</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>install</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/typescript-guide/install/node.html" aria-current="page" class="active sidebar-link">node.js 설치</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/typescript-guide/install/type.html" class="sidebar-link">타입 스크립트 환경 설정</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="node-js-설치"><a href="#node-js-설치" class="header-anchor">#</a> node.js 설치</h1> <blockquote><p>node.js LTS 버전을 갖춰줍니다.</p></blockquote> <h3 id="_1-환경"><a href="#_1-환경" class="header-anchor">#</a> 1) 환경</h3> <p>타입 스크립트를 사용할때는 <code>LTS(Long Term Support) 버전</code>의 node.js를 사용하는것이 좋습니다.</p> <p>2022.05.05의 LTS 버전은 <code>16.15.0</code> 입니다.</p> <p><img src="/typescript-guide/assets/img/lts.6a65f8de.png" alt="cover"></p> <h3 id="_2-node-js-버전-확인"><a href="#_2-node-js-버전-확인" class="header-anchor">#</a> 2) node.js 버전 확인</h3> <div class="language- extra-class"><pre class="language-text"><code>node --version
+</code></pre></div><p><img src="/typescript-guide/assets/img/node-version.baaf4ebe.png" alt="cover"></p> <h3 id="_3-nvm-설치"><a href="#_3-nvm-설치" class="header-anchor">#</a> 3) nvm 설치</h3> <p><code>NVM</code>은 Node Version Manager로 node.js 의 여러 버전을 사용할 수 있도록 도와주는 도구입니다.</p> <p>NVM을 설치하고, LTS 버전을 사용해봅시다.</p> <div class="language- extra-class"><pre class="language-text"><code>node i -g nvm
+</code></pre></div><h3 id="_4-node-js-버전-lts-로-업그레이드"><a href="#_4-node-js-버전-lts-로-업그레이드" class="header-anchor">#</a> 4) node.js 버전 LTS 로 업그레이드</h3> <p>LTS 버전의 node.js 를 설치합니다.</p> <div class="language- extra-class"><pre class="language-text"><code>nvm install --lts
+</code></pre></div><p>현새 사용중인 LTS 버전을 기본값으로 사용합니다.</p> <p>이 명령어를 수행하지 않으면 터미널을 새로 열때마다 이전 버전으로 돌아갑니다.</p> <div class="language- extra-class"><pre class="language-text"><code>nvm alias default node
+</code></pre></div><p><img src="/typescript-guide/assets/img/lts-default.c04b01b1.png" alt="cover"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/typescript-guide/intro/intro.html" class="prev">
+        TypeScript 가이드
+      </a></span> <span class="next"><a href="/typescript-guide/install/type.html">
+        타입 스크립트 환경 설정
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/typescript-guide/assets/js/app.6d1d395d.js" defer></script><script src="/typescript-guide/assets/js/2.5766b804.js" defer></script><script src="/typescript-guide/assets/js/3.26fbce2b.js" defer></script>
+  </body>
+</html>

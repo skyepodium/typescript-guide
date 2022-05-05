@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>타입 스크립트 환경 설정 | Study in TypeScript</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="타입스크립트 가이드">
+    
+    <link rel="preload" href="/typescript-guide/assets/css/0.styles.cd042308.css" as="style"><link rel="preload" href="/typescript-guide/assets/js/app.6d1d395d.js" as="script"><link rel="preload" href="/typescript-guide/assets/js/2.5766b804.js" as="script"><link rel="preload" href="/typescript-guide/assets/js/7.56918a23.js" as="script"><link rel="prefetch" href="/typescript-guide/assets/js/10.c01655cd.js"><link rel="prefetch" href="/typescript-guide/assets/js/3.26fbce2b.js"><link rel="prefetch" href="/typescript-guide/assets/js/4.87eb7f60.js"><link rel="prefetch" href="/typescript-guide/assets/js/5.aab965f2.js"><link rel="prefetch" href="/typescript-guide/assets/js/6.d65506ca.js"><link rel="prefetch" href="/typescript-guide/assets/js/8.86212562.js"><link rel="prefetch" href="/typescript-guide/assets/js/9.842739d4.js">
+    <link rel="stylesheet" href="/typescript-guide/assets/css/0.styles.cd042308.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/typescript-guide/" class="home-link router-link-active"><!----> <span class="site-name">Study in TypeScript</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>intro</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/typescript-guide/intro/intro.html" class="sidebar-link">TypeScript 가이드</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>install</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/typescript-guide/install/node.html" class="sidebar-link">node.js 설치</a></li><li><a href="/typescript-guide/install/type.html" aria-current="page" class="active sidebar-link">타입 스크립트 환경 설정</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="타입-스크립트-환경-설정"><a href="#타입-스크립트-환경-설정" class="header-anchor">#</a> 타입 스크립트 환경 설정</h1> <h3 id="_1-빈-폴더-생성"><a href="#_1-빈-폴더-생성" class="header-anchor">#</a> 1) 빈 폴더 생성</h3> <p>사용할 폴더를 만들고 이동합니다.</p> <div class="language- extra-class"><pre class="language-text"><code>mkdir ts-playground
+
+cd ts-playground
+</code></pre></div><h3 id="_2-npm-init"><a href="#_2-npm-init" class="header-anchor">#</a> 2) npm init</h3> <p>현재 폴더를 npm 패키지로 생성합니다.</p> <div class="language- extra-class"><pre class="language-text"><code>npm init
+</code></pre></div><p><code>npm init</code> 명령어를 수행하면 <code>package.json</code> 파일이 생성됩니다.</p> <p><img src="/typescript-guide/assets/img/package.9a5969b1.png" alt="cover"></p> <h3 id="_3-typescript-설치"><a href="#_3-typescript-설치" class="header-anchor">#</a> 3) TypeScript 설치</h3> <p>외부 라이브러리는 크게 2가지로 나누어집니다. <code>1) dependencies, 2) devDependencies</code>
+개발할때만 사용하고, 실제 서비스할 때는 사용되지 않는 라이브러리들은 <code>devDependencies</code>에 포함됩니다.</p> <p>타입스크립트 또한 <code>devDependencies</code> 라이브러리입니다. 따라서, <code>-D</code> 옵션을 사용해서 설치합니다.</p> <div class="language- extra-class"><pre class="language-text"><code>npm i -D typescript
+</code></pre></div><p>package.json 파일의 <code>devDependencies</code> 항목에 <code>typescript</code>가 추가되었습니다.</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ts-playground&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ISC&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;typescript&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.6.4&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_4-tsconfig-js"><a href="#_4-tsconfig-js" class="header-anchor">#</a> 4) tsconfig.js</h3> <p><code>tsconfig.js</code>는 타입스크립트 환경을 위한 파일입니다. 루트에 <code>tsconfig.js</code>를 생성해줍니다.</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;compilerOptions&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es6&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonjs&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_5-ts-파일-작성"><a href="#_5-ts-파일-작성" class="header-anchor">#</a> 5) .ts 파일 작성</h3> <p>두개의 숫자를 받고 합을 반환하는 함수를 만들어줍니다.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// index.ts</span>
+<span class="token keyword">const</span> sum <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token operator">:</span><span class="token builtin">number</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> res<span class="token operator">:</span><span class="token builtin">number</span> <span class="token operator">=</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'res'</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span>
+</code></pre></div><h3 id="_6-컴파일"><a href="#_6-컴파일" class="header-anchor">#</a> 6) 컴파일</h3> <p><code>tsc</code>는 TypeScript compile의 약자입니다.</p> <p>tsc로 컴파일하여 <code>.js</code>을 만들어줍니다.</p> <div class="language-shell extra-class"><pre class="language-shell"><code>tsc index.ts
+</code></pre></div><h3 id="_7-실행"><a href="#_7-실행" class="header-anchor">#</a> 7) 실행</h3> <div class="language- extra-class"><pre class="language-text"><code>node index.ts
+</code></pre></div><h3 id="_8-ts-node"><a href="#_8-ts-node" class="header-anchor">#</a> 8) ts-node</h3> <p><code>ts-node</code> 는 1) tsc로 컴파일, 2) node 명령어로 실행하는 과정을 한번에 해줍니다.</p> <p>개인적으로는 leetcode의 알고리즘 문제를 TypeScript로 풀때 편리하게 사용하고 있습니다.</p> <ul><li>설치</li></ul> <div class="language- extra-class"><pre class="language-text"><code>npm i ts-node
+</code></pre></div><ul><li>실행</li></ul> <div class="language- extra-class"><pre class="language-text"><code>ts-node index
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/typescript-guide/install/node.html" class="prev">
+        node.js 설치
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/typescript-guide/assets/js/app.6d1d395d.js" defer></script><script src="/typescript-guide/assets/js/2.5766b804.js" defer></script><script src="/typescript-guide/assets/js/7.56918a23.js" defer></script>
+  </body>
+</html>
