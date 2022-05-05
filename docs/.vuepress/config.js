@@ -6,10 +6,10 @@ module.exports = {
     themeConfig: {
       sidebar: [
         {
-          title: 'intro',
+          title: '소개',
           collapsable: false,
           children: [
-            '/intro/intro'
+            '/intro/why'
           ],
         },
         {
@@ -19,7 +19,15 @@ module.exports = {
             '/install/node',
             '/install/type'
           ],
-        }        
+        },
+        {
+          title: 'basic',
+          collapsable: false,
+          children: [
+            '/basic/variable',
+            '/basic/function'
+          ],
+        }             
       ]
     } 
   }
