@@ -16,7 +16,8 @@ module.exports = {
           title: 'install',
           collapsable: false,
           children: [
-            '/install/install'
+            '/install/node',
+            '/install/type'
           ],
         }        
       ]
